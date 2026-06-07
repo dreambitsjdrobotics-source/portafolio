@@ -1,0 +1,79 @@
+/* - variables glbales */
+
+:root {
+    --amarillo: #FFD700;
+    --negro: #111;
+    --blanco: #fff; 
+    --gris-suave: #f5f5f5;
+}
+
+/* Reset y base */
+/* Reset para eliminar los estilos por defecto de cada navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Base es el estilo fundamental para toda la pagina */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--blanco);
+    color: var(--negro);
+}
+
+/* Botón menú */
+#boton-menu {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    z-index: 1050;
+    font-size: 1.5rem;
+    background-color: var(--amarillo);
+    border: none;
+    border-radius: 5px;
+    padding: 0.3rem 0.7rem;
+    cursor: pointer;
+}
+
+body:has(.offcanvas.show) #boton-menu {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* slidebar / offcanvas */
+#menuLateral {
+    background-color: var(--amarillo);
+    /* idth: 200px; /* Me parece que esto lo debo ajustar al tamaño del contenido */
+    width: fit-content;
+    
+}
+
+#menuLateral .offcanvas-title {
+    color: var(--negro);
+    font-weight: bold;
+}
+
+#menuLateral nav ul {
+    list-style: none;
+    padding: 0 1.5rem;
+}
+
+#menuLateral nav ul li {
+    margin-bottom: 1rem;
+}
+
+#menuLateral nav ul li a {
+    color: var(--negro);
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+#menuLateral nav ul li a:hover{
+    text-decoration: underline;
+}
+
+/* --- Hero --- */
+#hero {
+    min
+}

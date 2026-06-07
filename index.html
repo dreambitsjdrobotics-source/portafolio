@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juan David Jiménez López</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- SIDEBAR (Offcanvas de boostrap)-->
+    <button class="btn" id="boton-menu" data-bs-toggle="offcanvas" data-bs-target="#menuLateral">
+        ☰
+    </button>
+
+    <div class="offcanvas offcanvas-start" id="menuLateral">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title">Menú</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <nav>
+                <ul>
+                    <li><a href="#quien-soy">Quién soy</a></li>
+                    <li><a href="#formacion">Formación</a></li>
+                    <li><a href="#proyectos">Proyectos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    
+    <!-- Hero-->
+
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Juan David Jiménez López</h1>
+            <h2>Desarrollador Web • Ing. Sistemas  • Adm. Empresas • Ing. Electrónico</h2>
+            <p>Construyendo soluciones entre el código, los circuitos y los negocios</p>
+        </div>
+    </section>
+
+    <!-- SECTIONS -->
+        <!-- Quien soy -->
+         <section id="quien-soy">
+            <div class="container">
+                <h2>Quién soy</h2>
+                <p>Soy Juan David Jiménez López, ingeniero de sistemas, administrador de empresas e ingeniero electrónico. Me apasiona construir soluciones que combinan tecnología, negocios y electrónica</p>
+            </div>
+         </section>
+
+        <!-- formación --> 
+         <section id="formacion">
+            <div class="container">
+                <h2>Formación</h2>
+                <ul>
+                    <li>Ingeniería de sistemas - Universidad X</li>
+                    <li>Administración de Empresas - Universidad X</li>
+                    <li>ingeniería electrónica - Universidad X</li>
+                </ul>
+            </div>
+         </section>
+
+
+        <!-- Proyectos -->
+        <section id="proyectos">
+            <div class="container">
+                <h2>Proyectos</h2>
+                <!-- Aquí va el carrusel, lo hacemos en el siguiente paso-->
+
+                <div id="carruselProyectos" class="carousel slide">
+
+                    <!-- Indicadores -->
+                     <div class="carousel-indicators">
+                        <button data-bs-target="#carruselProyectos" data-bs-slide-to="0" class="active"></button>
+                        <button data-bs-target="#carruselProyectos" data-bs-slide-to="1"></button>
+                        <button data-bs-target="#carruselProyectos" data-bs-slide-to="2"></button>
+                     </div>
+
+                     <!-- Slides -->
+                    <div class="carousel-inner">
+
+                        <div class="carousel-item active">
+                            <div class="proyecto-card">
+                                <h3>Proyecto 1</h3>
+                                <p>Descripción breve del proyecto</p>
+                                <a href="pages/proyecto-detalle.html?id=1">Ver más</a>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="proyecto-card">
+                                <h3>Proyecto 2</h3>
+                                <p>Descripción breve del proyecto</p>
+                                <a href="pages/proyecto-detalle.html?id=2">Ver más</a>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="proyecto-card">
+                                <h3>Proyecto 3</h3>
+                                <p>Descripción breve del proyecto</p>
+                                <a href="pages/proyecto-detalle.html?id=3">Ver más</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Controles anteriores/siguiente -->
+                     <button class="carousel-control-prev" data-bs-target="#carruselProyectos" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                     </button>
+                     <button class="carousel-control-next" data-bs-target="#carruselProyectos" data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                     </button>
+                     
+                </div>
+            </div>
+        </section>
+
+        <!-- contacto -->
+         <section id="contacto">
+            <div class="container">
+                <h2>Contacto</h2>
+                <p>¿Tienes un proyecto en mente? Hablemos.</p>
+                <p>UserName@correo.com</p>
+            </div>
+         </section>
+
+    <!-- FOOTER -->
+     <footer>
+        <div class="container">
+
+            <div class="footer-redes">
+                <a href="https://instagram.com/" target="_blank">
+                    <i class="bi bi-instagram"></i>
+                    <span>Usuario</span>
+                </a>
+
+                <a href="https://linkedin.com/in" target="_blank">
+                    <i class="bi bi-linkedin"></i>
+                    <span>Mi usuario</span>
+                </a>
+
+                <a href="https://github.com/" target="_blank">
+                    <i class="bi bi-github"></i>
+                    <span>tu_usuario</span>
+                </a>
+
+                <a href="https://youtube.com" target="_blank">
+                    <i class="bi bi-youtube"></i>
+                    <span>@tu_usuario</span>
+                </a>
+
+                <a href="https://twitter.com" target="_blank">
+                    <i class="bi bi-twitter"></i>
+                    <span>@tu_usuario</span>
+                </a>
+            </div>
+
+            <p class="footer-copy">© 2026 Juan David Jiménez López. Todos los derechos reservados.</p>
+        </div>
+     </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <!-- Mi js personalizado -->
+    
+</body>
+</html>
