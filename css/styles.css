@@ -75,5 +75,51 @@ body:has(.offcanvas.show) #boton-menu {
 
 /* --- Hero --- */
 #hero {
-    min
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    background-color: var(--negro);
+    overflow: hidden;
+}
+
+/* Patrón de puntos */
+#hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle, var(--amarillo) 1px, transparent 1px);
+    background-size: 30px 30px;
+    opacity: 0.15;
+}
+
+/* Texto encima del patrón */
+.hero-content {
+    position: relative;
+    z-index: 1;
+    padding: 2rem;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--amarillo);
+    margin-bottom: 1rem;
+}
+
+.hero-content h2 {
+    font-size: 1.2rem;
+    color: var(--amarillo);
+    margin-bottom: 1rem;
+}
+
+.hero-content p{
+    font-size: 1rem;
+    color: var(--blanco);
+    opacity: 0.8;
 }
