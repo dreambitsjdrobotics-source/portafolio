@@ -123,3 +123,46 @@ body:has(.offcanvas.show) #boton-menu {
     color: var(--blanco);
     opacity: 0.8;
 }
+
+/* Secciones generales */
+
+section {
+    padding: 5rem 0;
+}
+
+section h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    border-left: 5px solid var(--amarillo);
+    padding-left: 1rem;
+}
+
+/* Quién soy */
+#quien-soy {
+    background-color: var(--blanco);
+}
+
+#quien-soy p{
+    font-size: 1.1rem;
+    line-height: 1.8;
+    max-width: 700px;
+}
+
+/*   Formación   */
+#formacion {
+    background-color: var(--gris-suave);
+}
+
+#formacion ul {
+    list-style: none;
+    padding: 0;
+}
+
+#formacion ul li {
+    font-size: 1.1rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-left: 4px solid var(--amarillo);
+    background-color: var(--blanco);
+}
