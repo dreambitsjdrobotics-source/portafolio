@@ -43,7 +43,6 @@ body:has(.offcanvas.show) #boton-menu {
 /* slidebar / offcanvas */
 #menuLateral {
     background-color: var(--amarillo);
-    /* idth: 200px; /* Me parece que esto lo debo ajustar al tamaño del contenido */
     width: fit-content;
     
 }
@@ -70,6 +69,18 @@ body:has(.offcanvas.show) #boton-menu {
 }
 
 #menuLateral nav ul li a:hover{
+    text-decoration: underline;
+}
+
+/* Botón menú para ir al inicio o hero */
+#menuLateral .offcanvas-title a {
+    color: var(--negro);
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+#menuLateral .offcanvas-title a:hover{
     text-decoration: underline;
 }
 
@@ -114,7 +125,7 @@ body:has(.offcanvas.show) #boton-menu {
 
 .hero-content h2 {
     font-size: 1.2rem;
-    color: var(--amarillo);
+    color: var(--blanco);
     margin-bottom: 1rem;
 }
 
@@ -165,4 +176,53 @@ section h2 {
     margin-bottom: 1rem;
     border-left: 4px solid var(--amarillo);
     background-color: var(--blanco);
+}
+
+
+/* Proyectos */
+#proyectos {
+    background-color: var(--blanco);
+}
+
+/* Tarjetas de cada proyecto */
+.proyecto-card {
+    background-color: var(--gris-suave);
+    border-top: 4px solid var(--amarillo);
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+    margin: 2rem auto;
+    max-width: 600px;
+}
+
+.proyecto-card h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.proyecto-card p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    color: #444;
+}
+
+.proyecto-card a {
+    background-color: var(--amarillo);
+    color: var(--negro);
+    padding: 0.5rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.proyecto-card a:hover {
+    background-color: var(--negro);
+    color: var(--amarillo);
+}
+
+/* Controles del carrusel */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(1);
 }
