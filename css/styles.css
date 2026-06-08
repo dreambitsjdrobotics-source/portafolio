@@ -199,6 +199,12 @@ section h2 {
     max-width: 600px;
 }
 
+.proyecto-card img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
 .proyecto-card h3 {
     font-size: 1.5rem;
     font-weight: bold;

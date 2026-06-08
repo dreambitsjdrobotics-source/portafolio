@@ -45,6 +45,7 @@ proyectos.forEach(function(proyecto, index){
     slides.innerHTML += `
     <div class="carousel-item ${index === 0 ? 'active' : ''}">
         <div class="proyecto-card">
+            <img src="https://placehold.co/600x400" alt="${proyecto.titulo}">
             <h3>${proyecto.titulo}</h3>
             <p>${proyecto.descripcion}</p>
             <a href="pages/proyecto-detalle.html?id=${proyecto.id}">Ver más</a>
