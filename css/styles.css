@@ -135,6 +135,10 @@ body:has(.offcanvas.show) #boton-menu {
     opacity: 0.8;
 }
 
+#hero h2 {
+    border-right: 5px solid var(--amarillo);
+}
+
 /* Secciones generales */
 
 section {
