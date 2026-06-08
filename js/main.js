@@ -3,25 +3,67 @@ const proyectos = [
         id: 1,
         titulo: "Proyecto 1",
         descripcion: "Descripción breve del proyecto",
-        tecnologias: ["HTML", "CSS", "JavaScript"],
-        imagen: "assets/img/proyecto1.jpg",
-        detalle: "Descripción larga y detallada del proyecto"
+        imagenes: [
+            "assets/img/proyectos/p1/hero.jpg",      // primera imagen — el hero
+            "assets/img/proyectos/p1/detalle1.jpg",
+            "assets/img/proyectos/p1/detalle2.jpg"
+        ],
+        introduccion: "contexto del proyecto...",
+        personajes: ["Cliente", "Equipo"],
+        mi_rol: "Desarrollador principal...",
+        retos: "Los principales retos fueron...",
+        solucion: "Se resolvió mediante...",
+        herramientas: [
+            {nombre: "React", logo: "assets/img/logos/react.svg"}
+        ],
+        anexos: [
+            { tipo: "github", url: "https://github.com/...", texto: "Ver código"},
+            { tipo: "web", url: "https://...", texto: "Ver proyecto" }
+        ]
     },
     {
         id: 2,
         titulo: "Proyecto 2",
         descripcion: "Descripción breve del proyecto",
-        tecnologias: ["Python", "Django"],
-        imagen: "assets/img/proyecto2.jpg",
-        detalle: "Descripción larga y detallada del proyecto"
+        imagenes: [
+            "assets/img/proyectos/p2/hero.jpg",      // primera imagen — el hero
+            "assets/img/proyectos/p2/detalle1.jpg",
+            "assets/img/proyectos/p2/detalle2.jpg"
+        ],
+        introduccion: "contexto del proyecto...",
+        personajes: ["Cliente", "Equipo"],
+        mi_rol: "Desarrollador principal...",
+        retos: "Los principales retos fueron...",
+        solucion: "Se resolvió mediante...",
+        herramientas: [
+            {nombre: "React", logo: "assets/img/logos/react.svg"}
+        ],
+        anexos: [
+            { tipo: "github", url: "https://github.com/...", texto: "Ver código"},
+            { tipo: "web", url: "https://...", texto: "Ver proyecto" }
+        ]
     },
     {
         id: 3,
         titulo: "Proyecto 3",
         descripcion: "Descripción breve del proyecto",
-        tecnologias: ["React", "Node.js"],
-        imagen: "assets/img/proyecto3.jpg",
-        detalle: "Descripción larga y detallada del proyecto"
+        imagenes: [
+            "assets/img/proyectos/p3/hero.jpg",      // primera imagen — el hero
+            "assets/img/proyectos/p3/detalle1.jpg",
+            "assets/img/proyectos/p3/detalle2.jpg"
+        ],
+        introduccion: "contexto del proyecto...",
+        personajes: ["Cliente", "Equipo"],
+        mi_rol: "Desarrollador principal...",
+        retos: "Los principales retos fueron...",
+        solucion: "Se resolvió mediante...",
+        herramientas: [
+            {nombre: "React", logo: "assets/img/logos/react.svg"}
+        ],
+        anexos: [
+            { tipo: "github", url: "https://github.com/...", texto: "Ver código"},
+            { tipo: "web", url: "https://...", texto: "Ver proyecto" }
+        ]
     }
 ]
 
@@ -72,16 +114,74 @@ if(contenedor){
     //Mostrando el proyecto
     if (proyecto) {
         contenedor.innerHTML = `
-        <div class="detalle-header">
-            <a href="../index.html#proyectos">← Volver</a>
-            <h1>${proyecto.titulo}</h1>
-            <img src="https://placehold.co/800x400" alt="${proyecto.titulo}">
-            <p>${proyecto.detalle}</p>
-            <div class="tecnologias">
-                ${proyecto.tecnologias.map(function(tec){
-                    return `<span class="badge">${tec}</span>`
+        <!-- Hero con primera imagen -->
+        <div class="detalle-hero" style="background-image: url('https://placehold.co/1400x600')">
+            <div class="detalle-hero-texto">
+                <h1>${proyecto.titulo}</h1>
+                <p>${proyecto.descripcion}</p>
+            </div>
+        </div>
+
+        <!-- Introducción -->
+        <section class="detalle-seccion">
+            <h2>Introducción</h2>
+            <p>${proyecto.introduccion}</p>
+        </section>
+
+        <!-- Personajes -->
+        <section class="detalle-seccion">
+            <h2>Personajes</h2>
+            <ul>
+                ${proyecto.personajes.map(function(p) {
+                    return `<li>${p}</li>`
+                }).join('')}
+            </ul>
+        </section>
+
+        <!-- Mi rol -->
+        <section class="detalle-seccion">
+            <h2>Mi rol</h2>
+            <p>${proyecto.mi_rol}</p>
+        </section>
+
+        <!-- Retos -->
+        <section class="detalle-seccion fondo-gris">
+            <h2>Retos</h2>
+            <p>${proyecto.retos}</p>
+        </section>
+
+        <!-- Solución -->
+        <section class="detalle-seccion">
+            <h2>Solución</h2>
+            <p>${proyecto.solucion}</p>
+        </section>
+
+        <!-- Herramientas -->
+        <section class="detalle-seccion fondo-gris">
+            <h2>Herramientas</h2>
+            <div class="herramientas">
+                ${proyecto.herramientas.map(function(h) {
+                    return `<div class="herramienta">
+                                <img src="https://placehold.co/50x50" alt="${h.nombre}">
+                                <span>${h.nombre}</span>
+                            </div>`
                 }).join('')}
             </div>
+        </section>
+
+        <!-- Anexos -->
+        <section class="detalle-seccion">
+            <h2>Anexos</h2>
+            <div class="anexos">
+                ${proyecto.anexos.map(function(a) {
+                    return `<a href="${a.url}" target="_blank" class="anexo-btn">${a.texto}</a>`
+                }).join('')}
+            </div>
+        </section>
+
+        <!-- Volver -->
+        <div class="detalle-seccion">
+            <a href="../index.html" class="btn-volver">← Volver al portafolio</a>
         </div>`
     }
 } else {
