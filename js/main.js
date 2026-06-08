@@ -32,6 +32,7 @@ const proyectos = [
 const slides = document.getElementById('slides')
 const indicadores = document.getElementById('indicadores')
 
+if (slides && indicadores ){
 proyectos.forEach(function(proyecto, index){
 
     // Acá se crea el indicador
@@ -52,3 +53,37 @@ proyectos.forEach(function(proyecto, index){
         </div>
     </div>`
 })
+}
+
+
+// Lógica para proyecto-detalle.html
+const contenedor = document.getElementById('detalle-proyecto')
+
+if(contenedor){
+    // Aquí se lee el id de la url
+    const params = new URLSearchParams(window.location.search)
+    const id = parseInt(params.get('id'))
+
+    // Se busca el proyecto en el array
+    const proyecto = proyectos.find(function(p) {
+        return p.id === id
+    })
+
+    //Mostrando el proyecto
+    if (proyecto) {
+        contenedor.innerHTML = `
+        <div class="detalle-header">
+            <a href="../index.html">← Volver</a>
+            <h1>${proyecto.titulo}</h1>
+            <img src="https://placehold.co/800x400" alt="${proyecto.titulo}">
+            <p>${proyecto.detalle}</p>
+            <div class="tecnologias">
+                ${proyecto.tecnologias.map(function(tec){
+                    return `<span class="badge">${tec}</span>`
+                }).join('')}
+            </div>
+        </div>`
+    }
+} else {
+    contenedor.innerHTML = `<p>Proyecto no encontrado</p>`
+}
