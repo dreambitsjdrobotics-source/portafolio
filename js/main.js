@@ -73,7 +73,7 @@ if(contenedor){
     if (proyecto) {
         contenedor.innerHTML = `
         <div class="detalle-header">
-            <a href="../index.html">← Volver</a>
+            <a href="../index.html#proyectos">← Volver</a>
             <h1>${proyecto.titulo}</h1>
             <img src="https://placehold.co/800x400" alt="${proyecto.titulo}">
             <p>${proyecto.detalle}</p>
