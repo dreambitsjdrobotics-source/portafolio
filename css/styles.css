@@ -2,6 +2,7 @@
 
 :root {
     --amarillo: #FFD700;
+    --amarillo-suave: #fce37f;
     --negro: #111;
     --blanco: #fff; 
     --gris-suave: #f5f5f5;
@@ -270,58 +271,162 @@ footer {
     opacity: 0.6;
     font-size: 0.9rem;
     text-align: center;
-}
+} 
 
 /* Detalle del proyecto */
-.detalle-header {
-    padding: 3rem 0;
-    max-width: 800px;
+#detalle-proyecto {
+    max-width: 100%;
+    padding: 0;
+}
+
+.detalle-hero {
+    min-height: 80vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+}
+
+.detalle-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.detalle-hero-texto{
+    position: relative;
+    z-index: 1;
+    padding: 3rem;
+    color: var(--blanco);
+}
+
+.detalle-hero-texto h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--amarillo);
+    margin-bottom: 0.5rem;
+}
+
+/* secciones del detalle del proyecto */
+.detalle-seccion {
+    padding: 3rem 1rem;
+    max-width: 90%;
     margin: 0 auto;
 }
 
-.detalle-header a {
-    color: var(--negro);
-    text-decoration: none;
+.detalle-seccion h2 {
+    font-size: 1.8rem;
     font-weight: bold;
-    display: inline-block;
-    margin-bottom: 2rem;
-}
-
-.detalle-header a:hover {
-    color: var(--amarillo);
-}
-
-.detalle-header h1 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     border-left: 5px solid var(--amarillo);
+    padding: 1rem;
 }
 
-.detalle-header img {
-    width: 100%;
-    border-radius: 8px;
-    margin-bottom: 2rem;
-}
-
-.detalle-header p {
+.detalle-seccion p,
+.detalle-seccion li {
     font-size: 1.1rem;
     line-height: 1.8;
-    margin-bottom: 2rem;
 }
 
-/* Badges de tecnologías */
-.tecnologias {
+.detalle-seccion ul {
+    list-style: none;
+    padding: 0;
+}
+
+.detalle-seccion ul li {
+    padding: 0.5rem 0;
+    border-left: 3px solid var(--gris-suave);
+    padding-left: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.fondo-gris {
+    background-color: var(--gris-suave);
+    max-width: 100%;
+    padding: 3rem  2rem;
+
+}
+
+.fondo-gris .detalle-seccion {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+/* herramientas */
+.herramientas {
     display: flex;
     flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.herramienta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 0.5rem;
 }
 
-.badge {
+.herramienta img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.anexo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 10% 10%;
+}
+
+.anexo-btn {
     background-color: var(--amarillo);
     color: var(--negro);
-    padding: 0.4rem 1rem;
-    border-radius: 20px;
-    font-size: 0.9rem;
+    padding: 0.6rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
     font-weight: bold;
+}
+
+.anexo-btn:hover {
+    background-color: var(--negro);
+    color: var(--amarillo);
+}
+
+/* Botón volver */
+.btn-volver {
+    display: inline-block;
+    color: var(--negro);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.btn-volver:hover {
+    color: var(--amarillo);
+}
+
+.fondo-amarillo {
+    background-color: var(--amarillo-suave);
+    position: relative;
+    overflow: hidden;
+}
+
+.fondo-amarillo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle, var(--negro) 1px, transparent 1px);
+    background-size: 30px 30px;
+    opacity: 0.1;
+}
+
+.fondo-amarillo .detalle-seccion {
+    position: relative;
+    z-index: 1;
 }

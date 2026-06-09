@@ -145,9 +145,11 @@ if(contenedor){
         </section>
 
         <!-- Retos -->
-        <section class="detalle-seccion fondo-gris">
-            <h2>Retos</h2>
-            <p>${proyecto.retos}</p>
+        <section class="fondo-amarillo">
+            <div class="detalle-seccion">     
+                <h2>Retos</h2>
+                <p>${proyecto.retos}</p>
+            </div>
         </section>
 
         <!-- Solución -->
@@ -157,22 +159,24 @@ if(contenedor){
         </section>
 
         <!-- Herramientas -->
-        <section class="detalle-seccion fondo-gris">
-            <h2>Herramientas</h2>
-            <div class="herramientas">
-                ${proyecto.herramientas.map(function(h) {
-                    return `<div class="herramienta">
-                                <img src="https://placehold.co/50x50" alt="${h.nombre}">
-                                <span>${h.nombre}</span>
-                            </div>`
-                }).join('')}
+        <section class="fondo-amarillo">
+            <div class="detalle-seccion">
+                <h2>Herramientas</h2>
+                <div class="herramientas">
+                    ${proyecto.herramientas.map(function(h) {
+                        return `<div class="herramienta">
+                                    <img src="https://placehold.co/50x50" alt="${h.nombre}">
+                                    <span>${h.nombre}</span>
+                                </div>`
+                    }).join('')}
+                </div>
             </div>
         </section>
 
         <!-- Anexos -->
         <section class="detalle-seccion">
             <h2>Anexos</h2>
-            <div class="anexos">
+            <div class="anexo">
                 ${proyecto.anexos.map(function(a) {
                     return `<a href="${a.url}" target="_blank" class="anexo-btn">${a.texto}</a>`
                 }).join('')}
@@ -181,7 +185,7 @@ if(contenedor){
 
         <!-- Volver -->
         <div class="detalle-seccion">
-            <a href="../index.html" class="btn-volver">← Volver al portafolio</a>
+            <a href="../index.html#proyectos" class="btn-volver">← Volver al portafolio</a>
         </div>`
     }
 } else {
