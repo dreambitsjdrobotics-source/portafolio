@@ -379,7 +379,6 @@ footer {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
-    margin: 10% 10%;
 }
 
 .anexo-btn {
@@ -409,7 +408,7 @@ footer {
 }
 
 .fondo-amarillo {
-    background-color: var(--amarillo-suave);
+    background-color: var(--gris-suave);
     position: relative;
     overflow: hidden;
 }

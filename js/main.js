@@ -88,7 +88,7 @@ proyectos.forEach(function(proyecto, index){
     slides.innerHTML += `
     <div class="carousel-item ${index === 0 ? 'active' : ''}">
         <div class="proyecto-card">
-            <img src="https://placehold.co/600x400" alt="${proyecto.titulo}">
+            <img src="assets/img/proyectos/p${proyecto.id}/hero.jpg" alt="${proyecto.titulo}">
             <h3>${proyecto.titulo}</h3>
             <p>${proyecto.descripcion}</p>
             <a href="pages/proyecto-detalle.html?id=${proyecto.id}">Ver más</a>
@@ -115,7 +115,7 @@ if(contenedor){
     if (proyecto) {
         contenedor.innerHTML = `
         <!-- Hero con primera imagen -->
-        <div class="detalle-hero" style="background-image: url('https://placehold.co/1400x600')">
+        <div class="detalle-hero" style="background-image: url('../assets/img/proyectos/p${proyecto.id}/hero.jpg')">
             <div class="detalle-hero-texto">
                 <h1>${proyecto.titulo}</h1>
                 <p>${proyecto.descripcion}</p>
