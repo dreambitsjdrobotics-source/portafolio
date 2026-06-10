@@ -238,10 +238,21 @@ if(contenedor){
 
 
 const slidesProyectos = document.getElementById('slides-pagina')
+const indicadoresPagina = document.getElementById(('indicadores-pagina'))
 
 if(slidesProyectos){
     // Dividir proyectos en grupos de 3
     for(let i = 0; i < proyectos.length; i += 3){
+
+
+        if(indicadoresPagina){
+            indicadoresPagina.innerHTML += `
+                <button data-bs-target="#carruselProyectosPagina"
+                    data-bs-slide-to="${i / 3}"
+                    class="${i === 0 ? 'active' : ''}">
+            </button>`
+        }
+
         const grupo = proyectos.slice(i, i + 3)
         
         const tarjetas = grupo.map(function(proyecto){
