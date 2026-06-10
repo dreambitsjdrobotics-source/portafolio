@@ -64,6 +64,50 @@ const proyectos = [
             { tipo: "github", url: "https://github.com/...", texto: "Ver código"},
             { tipo: "web", url: "https://...", texto: "Ver proyecto" }
         ]
+    },
+    {
+        id: 4,
+        titulo: "Proyecto 4",
+        descripcion: "Descripción breve del proyecto",
+        imagenes: [
+            "assets/img/proyectos/p3/hero.jpg",      // primera imagen — el hero
+            "assets/img/proyectos/p3/detalle1.jpg",
+            "assets/img/proyectos/p3/detalle2.jpg"
+        ],
+        introduccion: "contexto del proyecto...",
+        personajes: ["Cliente", "Equipo"],
+        mi_rol: "Desarrollador principal...",
+        retos: "Los principales retos fueron...",
+        solucion: "Se resolvió mediante...",
+        herramientas: [
+            {nombre: "Python", logo: "assets/img/logos/react.svg"}
+        ],
+        anexos: [
+            { tipo: "github", url: "https://github.com/...", texto: "Ver código"},
+            { tipo: "web", url: "https://...", texto: "Ver proyecto" }
+        ]
+    },
+    {
+        id: 5,
+        titulo: "Proyecto 5",
+        descripcion: "Descripción breve del proyecto",
+        imagenes: [
+            "assets/img/proyectos/p3/hero.jpg",      // primera imagen — el hero
+            "assets/img/proyectos/p3/detalle1.jpg",
+            "assets/img/proyectos/p3/detalle2.jpg"
+        ],
+        introduccion: "contexto del proyecto...",
+        personajes: ["Cliente", "Equipo"],
+        mi_rol: "Desarrollador principal...",
+        retos: "Los principales retos fueron...",
+        solucion: "Se resolvió mediante...",
+        herramientas: [
+            {nombre: "React", logo: "assets/img/logos/react.svg"}
+        ],
+        anexos: [
+            { tipo: "github", url: "https://github.com/...", texto: "Ver código"},
+            { tipo: "web", url: "https://...", texto: "Ver proyecto" }
+        ]
     }
 ]
 
@@ -88,7 +132,7 @@ proyectos.forEach(function(proyecto, index){
     slides.innerHTML += `
     <div class="carousel-item ${index === 0 ? 'active' : ''}">
         <div class="proyecto-card">
-            <img src="assets/img/proyectos/p${proyecto.id}/hero.jpg" alt="${proyecto.titulo}">
+            <img src="assets/img/proyectos/p${proyecto.id}/hero.jpg" alt="${proyecto.titulo}" onerror="this.src='https://placehold.co/600x400'">
             <h3>${proyecto.titulo}</h3>
             <p>${proyecto.descripcion}</p>
             <a href="pages/proyecto-detalle.html?id=${proyecto.id}">Ver más</a>
@@ -187,7 +231,70 @@ if(contenedor){
         <div class="detalle-seccion">
             <a href="../index.html#proyectos" class="btn-volver">← Volver al portafolio</a>
         </div>`
-    }
-} else {
+    } else {
     contenedor.innerHTML = `<p>Proyecto no encontrado</p>`
+    }
+}
+
+
+const slidesProyectos = document.getElementById('slides-pagina')
+
+if(slidesProyectos){
+    // Dividir proyectos en grupos de 3
+    for(let i = 0; i < proyectos.length; i += 3){
+        const grupo = proyectos.slice(i, i + 3)
+        
+        const tarjetas = grupo.map(function(proyecto){
+            return `
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="proyecto-card">
+                    <img src="../assets/img/proyectos/p${proyecto.id}/hero.jpg" alt="${proyecto.titulo}" onerror="this.src='https://placehold.co/600x400'">
+                    <h3>${proyecto.titulo}</h3>
+                    <p>${proyecto.descripcion}</p>
+                    <a href="proyecto-detalle.html?id=${proyecto.id}&desde=proyectos">Ver más</a>
+                </div>
+            </div>`
+        }).join('')
+
+        slidesProyectos.innerHTML += `
+        <div class="carousel-item ${i === 0 ? 'active' : ''}">
+            <div class="row">
+                ${tarjetas}
+            </div>
+        </div>`
+    }
+}
+
+const barraBuscadora = document.getElementById('buscador')
+
+if (barraBuscadora){
+    renderCuadricula(proyectos)
+    barraBuscadora.addEventListener('input', function(){
+        const textoBusqueda = barraBuscadora.value
+        const proyectosBuscados = proyectos.filter(function(proyecto){
+            return proyecto.herramientas.some(function(h){
+                    return h.nombre.toLowerCase().includes(textoBusqueda)
+                })
+        })
+        renderCuadricula(proyectosBuscados)
+    })
+    
+}
+
+function renderCuadricula(lista){
+    const cuadricula = document.getElementById('cuadricula')
+    if(cuadricula){
+        cuadricula.innerHTML = ''
+        lista.forEach(function(proyecto, index){
+        cuadricula.innerHTML += `
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="proyecto-card">
+                    <img src="../assets/img/proyectos/p${proyecto.id}/hero.jpg" alt="${proyecto.titulo}" onerror="this.src='https://placehold.co/600x400'">
+                    <h3>${proyecto.titulo}</h3>
+                    <p>${proyecto.descripcion}</p>
+                    <a href="proyecto-detalle.html?id=${proyecto.id}&desde=proyectos">Ver más</a>
+                </div>
+            </div>`
+        })
+    }
 }

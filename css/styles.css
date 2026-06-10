@@ -67,10 +67,12 @@ body:has(.offcanvas.show) #boton-menu {
     text-decoration: none;
     font-size: 1.2rem;
     font-weight: 600;
+        font-weight: lighter;
 }
 
 #menuLateral nav ul li a:hover{
     text-decoration: underline;
+    font-weight: bold;
 }
 
 /* Botón menú para ir al inicio o hero */
@@ -428,4 +430,23 @@ footer {
 .fondo-amarillo .detalle-seccion {
     position: relative;
     z-index: 1;
+}
+
+
+/* navbar de la página proyectos */
+
+.navbar {
+    background-color: var(--amarillo);
+    width: 100%;
+}
+
+.navbar .nav-link {
+    color: var(--negro);
+    font-weight: lighter;
+}
+
+.proyecto-card img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
 }
