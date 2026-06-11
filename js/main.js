@@ -4,9 +4,9 @@ const proyectos = [
         titulo: "Proyecto 1",
         descripcion: "Descripción breve del proyecto",
         imagenes: [
-            "assets/img/proyectos/p1/hero.jpg",      // primera imagen — el hero
-            "assets/img/proyectos/p1/detalle1.jpg",
-            "assets/img/proyectos/p1/detalle2.jpg"
+            "assets/img/proyectos/p1/hero.webp",      // primera imagen — el hero
+            "assets/img/proyectos/p1/detalle1.webp",
+            "assets/img/proyectos/p1/detalle2.webp"
         ],
         introduccion: "contexto del proyecto...",
         personajes: ["Cliente", "Equipo"],
@@ -26,9 +26,9 @@ const proyectos = [
         titulo: "Proyecto 2",
         descripcion: "Descripción breve del proyecto",
         imagenes: [
-            "assets/img/proyectos/p2/hero.jpg",      // primera imagen — el hero
-            "assets/img/proyectos/p2/detalle1.jpg",
-            "assets/img/proyectos/p2/detalle2.jpg"
+            "assets/img/proyectos/p2/hero.webp",      // primera imagen — el hero
+            "assets/img/proyectos/p2/detalle1.webp",
+            "assets/img/proyectos/p2/detalle2.webp"
         ],
         introduccion: "contexto del proyecto...",
         personajes: ["Cliente", "Equipo"],
@@ -48,9 +48,9 @@ const proyectos = [
         titulo: "Proyecto 3",
         descripcion: "Descripción breve del proyecto",
         imagenes: [
-            "assets/img/proyectos/p3/hero.jpg",      // primera imagen — el hero
-            "assets/img/proyectos/p3/detalle1.jpg",
-            "assets/img/proyectos/p3/detalle2.jpg"
+            "assets/img/proyectos/p3/hero.webp",      // primera imagen — el hero
+            "assets/img/proyectos/p3/detalle1.webp",
+            "assets/img/proyectos/p3/detalle2.webp"
         ],
         introduccion: "contexto del proyecto...",
         personajes: ["Cliente", "Equipo"],
@@ -70,9 +70,9 @@ const proyectos = [
         titulo: "Proyecto 4",
         descripcion: "Descripción breve del proyecto",
         imagenes: [
-            "assets/img/proyectos/p3/hero.jpg",      // primera imagen — el hero
-            "assets/img/proyectos/p3/detalle1.jpg",
-            "assets/img/proyectos/p3/detalle2.jpg"
+            "assets/img/proyectos/p3/hero.webp",      // primera imagen — el hero
+            "assets/img/proyectos/p3/detalle1.webp",
+            "assets/img/proyectos/p3/detalle2.webp"
         ],
         introduccion: "contexto del proyecto...",
         personajes: ["Cliente", "Equipo"],
@@ -92,9 +92,9 @@ const proyectos = [
         titulo: "Proyecto 5",
         descripcion: "Descripción breve del proyecto",
         imagenes: [
-            "assets/img/proyectos/p3/hero.jpg",      // primera imagen — el hero
-            "assets/img/proyectos/p3/detalle1.jpg",
-            "assets/img/proyectos/p3/detalle2.jpg"
+            "assets/img/proyectos/p3/hero.webp",      // primera imagen — el hero
+            "assets/img/proyectos/p3/detalle1.webp",
+            "assets/img/proyectos/p3/detalle2.webp"
         ],
         introduccion: "contexto del proyecto...",
         personajes: ["Cliente", "Equipo"],
@@ -132,7 +132,7 @@ proyectos.forEach(function(proyecto, index){
     slides.innerHTML += `
     <div class="carousel-item ${index === 0 ? 'active' : ''}">
         <div class="proyecto-card">
-            <img src="assets/img/proyectos/p${proyecto.id}/hero.jpg" alt="${proyecto.titulo}" onerror="this.src='https://placehold.co/600x400'">
+            <img src="assets/img/proyectos/p${proyecto.id}/hero.webp" alt="${proyecto.titulo}" onerror="this.src='https://placehold.co/600x400'">
             <h3>${proyecto.titulo}</h3>
             <p>${proyecto.descripcion}</p>
             <a href="pages/proyecto-detalle.html?id=${proyecto.id}">Ver más</a>
@@ -159,7 +159,7 @@ if(contenedor){
     if (proyecto) {
         contenedor.innerHTML = `
         <!-- Hero con primera imagen -->
-        <div class="detalle-hero" style="background-image: url('../assets/img/proyectos/p${proyecto.id}/hero.jpg')">
+        <div class="detalle-hero" style="background-image: url('../assets/img/proyectos/p${proyecto.id}/hero.webp')">
             <div class="detalle-hero-texto">
                 <h1>${proyecto.titulo}</h1>
                 <p>${proyecto.descripcion}</p>
@@ -259,7 +259,7 @@ if(slidesProyectos){
             return `
             <div class="col-12 col-md-6 col-lg-4">
                 <div class="proyecto-card">
-                    <img src="../assets/img/proyectos/p${proyecto.id}/hero.jpg" alt="${proyecto.titulo}" onerror="this.src='https://placehold.co/600x400'">
+                    <img src="../assets/img/proyectos/p${proyecto.id}/hero.webp" alt="${proyecto.titulo}" onerror="this.src='https://placehold.co/600x400'">
                     <h3>${proyecto.titulo}</h3>
                     <p>${proyecto.descripcion}</p>
                     <a href="proyecto-detalle.html?id=${proyecto.id}&desde=proyectos">Ver más</a>
@@ -300,7 +300,7 @@ function renderCuadricula(lista){
         cuadricula.innerHTML += `
             <div class="col-12 col-md-6 col-lg-4">
                 <div class="proyecto-card">
-                    <img src="../assets/img/proyectos/p${proyecto.id}/hero.jpg" alt="${proyecto.titulo}" onerror="this.src='https://placehold.co/600x400'">
+                    <img src="../assets/img/proyectos/p${proyecto.id}/hero.webp" alt="${proyecto.titulo}" onerror="this.src='https://placehold.co/600x400'">
                     <h3>${proyecto.titulo}</h3>
                     <p>${proyecto.descripcion}</p>
                     <a href="proyecto-detalle.html?id=${proyecto.id}&desde=proyectos">Ver más</a>

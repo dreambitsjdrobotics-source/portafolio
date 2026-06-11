@@ -512,3 +512,29 @@ footer {
     align-items: center;
     justify-content: center;
 }
+
+#carruselPaginaProyectos .container-fluid {
+    padding: 0 3rem;
+}
+
+#carruselProyectosPagina .carousel-control-prev {
+    justify-content: flex-start;  /* icono pegado a la izquierda */
+}
+#carruselProyectosPagina .carousel-control-next {
+    justify-content: flex-end;    /* icono pegado a la derecha */
+}
+
+/* Responsive carrusel proyectos */
+@media (max-width: 991px) {
+    #carruselPaginaProyectos {
+        display: none;
+    }
+}
+
+#titulo-proyectos h2{
+    text-align: center;
+}
+
+#navLinks {
+    justify-content: center;
+}
