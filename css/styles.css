@@ -268,6 +268,10 @@ footer {
     font-size:  1.5rem;
 }
 
+.footer-redes a:hover {
+    color: var(--amarillo);
+}
+
 .footer-copy {
     color: var(--blanco);
     opacity: 0.6;
