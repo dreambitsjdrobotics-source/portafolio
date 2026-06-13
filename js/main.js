@@ -111,6 +111,23 @@ const proyectos = [
     }
 ]
 
+// Lógica para la animación de tipeo
+const nombre = "Juan David Jiménez López"
+let i = 0
+const nombreDom = document.querySelector('.hero-content h1')
+
+if (nombreDom){
+    const nombreInterlval = setInterval(function(){
+        nombreDom.textContent += nombre[i]
+        i++
+        if(i === nombre.length){
+            clearInterval(nombreInterlval) // para cuando termina
+        }
+    }, 70)
+    
+}
+
+
 
 
 // cagar la tarjetas del carrusel dinamicamente
