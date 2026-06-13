@@ -45,7 +45,6 @@ body:has(.offcanvas.show) #boton-menu {
 #menuLateral {
     background-color: var(--amarillo);
     width: fit-content;
-    
 }
 
 #menuLateral .offcanvas-title {
@@ -55,7 +54,7 @@ body:has(.offcanvas.show) #boton-menu {
 
 #menuLateral nav ul {
     list-style: none;
-    padding: 0 1.5rem;
+    padding: 0 2rem;
 }
 
 #menuLateral nav ul li {
@@ -66,13 +65,12 @@ body:has(.offcanvas.show) #boton-menu {
     color: var(--negro);
     text-decoration: none;
     font-size: 1.2rem;
-    font-weight: 600;
-        font-weight: lighter;
+    font-weight: lighter;
 }
 
 #menuLateral nav ul li a:hover{
     text-decoration: underline;
-    font-weight: bold;
+    /* font-weight: bold; */
 }
 
 /* Botón menú para ir al inicio o hero */
@@ -238,6 +236,28 @@ section h2 {
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
     filter: invert(1);
+}
+
+.enlace-proyectos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.enlace-proyectos a {
+    background-color: var(--amarillo);
+    color: var(--negro);
+    padding: 0.5rem 1.5rem;
+    margin: 2rem;
+    border-radius: 5px;
+    border: 0px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.enlace-proyectos a:hover {
+    background-color: var(--negro);
+    color: var(--amarillo);
 }
 
 /* Footer */
