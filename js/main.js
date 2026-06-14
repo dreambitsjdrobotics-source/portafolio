@@ -176,20 +176,20 @@ if(contenedor){
         contenedor.innerHTML = `
         <!-- Hero con primera imagen -->
         <div class="detalle-hero" style="background-image: url('../assets/img/proyectos/p${proyecto.id}/hero.webp')">
-            <div class="detalle-hero-texto">
+            <div class="detalle-hero-texto animado">
                 <h1>${proyecto.titulo}</h1>
                 <p>${proyecto.descripcion}</p>
             </div>
         </div>
 
         <!-- Introducción -->
-        <section class="detalle-seccion">
+        <section class="detalle-seccion animado">
             <h2>Introducción</h2>
             <p>${proyecto.introduccion}</p>
         </section>
 
         <!-- Personajes -->
-        <section class="detalle-seccion">
+        <section class="detalle-seccion animado">
             <h2>Personajes</h2>
             <ul>
                 ${proyecto.personajes.map(function(p) {
@@ -199,28 +199,28 @@ if(contenedor){
         </section>
 
         <!-- Mi rol -->
-        <section class="detalle-seccion">
+        <section class="detalle-seccion animado">
             <h2>Mi rol</h2>
             <p>${proyecto.mi_rol}</p>
         </section>
 
         <!-- Retos -->
         <section class="fondo-amarillo">
-            <div class="detalle-seccion">     
+            <div class="detalle-seccion animado">     
                 <h2>Retos</h2>
                 <p>${proyecto.retos}</p>
             </div>
         </section>
 
         <!-- Solución -->
-        <section class="detalle-seccion">
+        <section class="detalle-seccion animado">
             <h2>Solución</h2>
             <p>${proyecto.solucion}</p>
         </section>
 
         <!-- Herramientas -->
         <section class="fondo-amarillo">
-            <div class="detalle-seccion">
+            <div class="detalle-seccion animado">
                 <h2>Herramientas</h2>
                 <div class="herramientas">
                     ${proyecto.herramientas.map(function(h) {
@@ -236,7 +236,7 @@ if(contenedor){
         <!-- Anexos -->
         <section class="detalle-seccion">
             <h2>Anexos</h2>
-            <div class="anexo">
+            <div class="anexo animado">
                 ${proyecto.anexos.map(function(a) {
                     return `<a href="${a.url}" target="_blank" class="anexo-btn">${a.texto}</a>`
                 }).join('')}
@@ -314,7 +314,7 @@ function renderCuadricula(lista){
         cuadricula.innerHTML = ''
         lista.forEach(function(proyecto, index){
         cuadricula.innerHTML += `
-            <div class="col-12 col-md-6 col-lg-4">
+            <div class="col-12 col-md-6 col-lg-4 animado">
                 <div class="proyecto-card">
                     <img src="../assets/img/proyectos/p${proyecto.id}/hero.webp" alt="${proyecto.titulo}" onerror="this.src='https://placehold.co/600x400'">
                     <h3>${proyecto.titulo}</h3>
@@ -324,4 +324,23 @@ function renderCuadricula(lista){
             </div>`
         })
     }
+}
+
+
+// Animaciones al hacer scroll
+const elementosAnimados = document.querySelectorAll('.animado')
+
+if(elementosAnimados.length > 0){
+    const observer = new IntersectionObserver(function(entries){
+        entries.forEach(function(entry){
+            if(entry.isIntersecting){
+                entry.target.classList.add('visible')
+                observer.unobserve(entry.target) // deja de observar una vez animado
+            }
+        })
+    }, { threshold: 0.1 })
+
+    elementosAnimados.forEach(function(elemento){
+        observer.observe(elemento)
+    })
 }

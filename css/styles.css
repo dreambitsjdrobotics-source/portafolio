@@ -562,3 +562,15 @@ footer {
 #navLinks {
     justify-content: center;
 }
+
+/* Animaciones scroll */
+.animado {
+    opacity: 0;
+    transform: translateY(90px);
+    transition: opacity 1.5s ease, transform 1s ease;
+}
+
+.animado.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
