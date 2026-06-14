@@ -124,7 +124,6 @@ if (nombreDom){
             clearInterval(nombreInterlval) // para cuando termina
         }
     }, 70)
-    
 }
 
 
