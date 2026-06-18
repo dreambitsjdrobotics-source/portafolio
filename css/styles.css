@@ -255,11 +255,19 @@ section h2 {
 /* Controles del carrusel */
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-    filter: invert(0);
+    filter: invert(1);
 }
 
-#proyectos #carousel-control-prev,
-#proyectos #carousel-control-next{
+#carruselProyectos .carousel-control-prev { 
+    left: -5rem; 
+}
+
+#carruselProyectos .carousel-control-next { 
+    right: -5rem; 
+}
+
+#proyectos .carousel-control-prev,
+#proyectos .carousel-control-next{
     width: fit-content;
 }
 
@@ -568,8 +576,8 @@ footer {
     padding: 0 3rem;
 }
 
-#carruselProyectosPagina #carousel-control-prev,
-#carruselProyectosPagina #carousel-control-next{
+#carruselProyectosPagina .carousel-control-prev,
+#carruselProyectosPagina .carousel-control-next{
     width: fit-content; 
 }
 
