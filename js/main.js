@@ -303,7 +303,7 @@ const barraBuscadora = document.getElementById('buscador')
 if (barraBuscadora){
     renderCuadricula(proyectos)
     barraBuscadora.addEventListener('input', function(){
-        const textoBusqueda = barraBuscadora.value
+        const textoBusqueda = barraBuscadora.value.toLowerCase()
         const proyectosBuscados = proyectos.filter(function(proyecto){
             return proyecto.herramientas.some(function(h){
                     return h.nombre.toLowerCase().includes(textoBusqueda)
@@ -332,24 +332,33 @@ function renderCuadricula(lista){
                 </div>
             </div>`
         })
+        observarAnimaciones(cuadricula)
     }
 }
 
 
 // Animaciones al hacer scroll
-const elementosAnimados = document.querySelectorAll('.animado')
+// Observador reutilizable para las animaciones de scroll
+var miObservador
 
-if(elementosAnimados.length > 0){
-    const observer = new IntersectionObserver(function(entries){
-        entries.forEach(function(entry){
-            if(entry.isIntersecting){
-                entry.target.classList.add('visible')
-                observer.unobserve(entry.target) // deja de observar una vez animado
-            }
-        })
-    }, { threshold: 0.1 })
+function observarAnimaciones(contenedor){
+    const base = contenedor || document
+    const elementos = base.querySelectorAll('.animado')
 
-    elementosAnimados.forEach(function(elemento){
-        observer.observe(elemento)
+    if(!miObservador){
+        miObservador = new IntersectionObserver(function(entries){
+            entries.forEach(function(entry){
+                if(entry.isIntersecting){
+                    entry.target.classList.add('visible')
+                    miObservador.unobserve(entry.target)
+                }
+            })
+        }, { threshold: 0.1 })
+    }
+
+    elementos.forEach(function(elemento){
+        miObservador.observe(elemento)
     })
 }
+
+observarAnimaciones()
