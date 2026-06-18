@@ -541,13 +541,16 @@ footer {
     padding: 0 3rem;
 }
 
+#carruselProyectosPagina button{
+    width: fit-content; 
+}
+
 #carruselProyectosPagina .carousel-control-prev {
     justify-content: flex-start;  /* icono pegado a la izquierda */
-    width: fit-content
 }
+
 #carruselProyectosPagina .carousel-control-next {
     justify-content: flex-end;    /* icono pegado a la derecha */
-    width: fit-content
 }
 
 /* Responsive carrusel proyectos */
