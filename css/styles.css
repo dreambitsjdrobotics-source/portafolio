@@ -186,12 +186,14 @@ section h2 {
 
 /* Proyectos */
 /*  Tarjetas de cada proyecto */
+
+
 .proyecto-card {
     position: relative;
     border-radius: 8px;
     overflow: hidden;
     aspect-ratio: 16/9;
-    /* margin: 0rem 5rem 5rem 5rem; */
+    margin-bottom: 2rem ;
 }
 
 .proyecto-card img {
@@ -256,8 +258,9 @@ section h2 {
     filter: invert(0);
 }
 
-#proyectos button{
-    width: fit-content; 
+#proyectos #carousel-control-prev,
+#proyectos #carousel-control-next{
+    width: fit-content;
 }
 
 #proyectos .carousel-control-prev {
@@ -565,7 +568,8 @@ footer {
     padding: 0 3rem;
 }
 
-#carruselProyectosPagina button{
+#carruselProyectosPagina #carousel-control-prev,
+#carruselProyectosPagina #carousel-control-next{
     width: fit-content; 
 }
 
