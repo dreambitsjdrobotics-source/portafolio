@@ -185,52 +185,74 @@ section h2 {
 
 
 /* Proyectos */
-#proyectos {
-    background-color: var(--blanco);
-}
-
-/* Tarjetas de cada proyecto */
+/*  Tarjetas de cada proyecto */
 .proyecto-card {
-    background-color: var(--gris-suave);
-    border-top: 4px solid var(--amarillo);
+    position: relative;
     border-radius: 8px;
-    padding: 2rem;
-    text-align: center;
-    margin: 2rem auto;
-    max-width: 600px;
+    overflow: hidden;
+    aspect-ratio: 4/3;
 }
 
 .proyecto-card img {
+    position: absolute;
+    inset: 0;
     width: 100%;
-    border-radius: 5px;
-    margin-bottom: 1rem;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
 }
 
-.proyecto-card h3 {
-    font-size: 1.5rem;
+.proyecto-card:hover img {
+    transform: scale(1.2);
+}
+
+.proyecto-card-degradado {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(transparent, rgba(0,0,0,0.9));
+}
+
+.proyecto-card-texto {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+    color: var(--blanco);
+}
+
+.proyecto-card-texto h3 {
+    font-size: 1.1rem;
     font-weight: bold;
-    margin-bottom: 1rem;
+    margin-bottom: 0.3rem;
 }
 
-.proyecto-card p {
-    font-size: 1rem;
-    margin-bottom: 1.5rem;
-    color: #444;
+.proyecto-card-texto p {
+    font-size: 0.85rem;
+    opacity: 0.8;
+    margin-bottom: 0.8rem;
 }
 
-.proyecto-card a {
+.proyecto-card-texto a {
     background-color: var(--amarillo);
     color: var(--negro);
-    padding: 0.5rem 1.5rem;
+    padding: 0.3rem 1rem;
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
+    font-size: 0.85rem;
 }
 
-.proyecto-card a:hover {
+.proyecto-card-texto a:hover {
     background-color: var(--negro);
     color: var(--amarillo);
+    border: 1px solid var(--amarillo)
 }
+
+
+
+
+
 
 /* Controles del carrusel */
 .carousel-control-prev-icon,
@@ -467,12 +489,6 @@ footer {
 .navbar .nav-link {
     color: var(--negro);
     font-weight: lighter;
-}
-
-.proyecto-card img {
-    width: 100%;
-    aspect-ratio: 16/9;
-    object-fit: cover;
 }
 
 .navbar .nav-link.active {

@@ -149,15 +149,18 @@ proyectos.forEach(function(proyecto, index){
     <div class="carousel-item ${index === 0 ? 'active' : ''}">
         <div class="proyecto-card">
             <img src="assets/img/proyectos/p${proyecto.id}/hero.webp" alt="${proyecto.titulo}" onerror="this.src='https://placehold.co/600x400'">
-            <h3>${proyecto.titulo}</h3>
-            <p>${proyecto.descripcion}</p>
-            <a href="pages/proyecto-detalle.html?id=${proyecto.id}">Ver más</a>
+            <div class="proyecto-card-degradado"></div>
+            <div class="proyecto-card-texto">
+                <h3>${proyecto.titulo}</h3>
+                <p>${proyecto.descripcion}</p>
+                <a href="pages/proyecto-detalle.html?id=${proyecto.id}">Ver más</a>
+            </div>    
         </div>
     </div>`
 })
 }
 
-
+/////////////////////////////////////////////////////////////////////////////////
 // Lógica para proyecto-detalle.html
 const contenedor = document.getElementById('detalle-proyecto')
 
@@ -251,7 +254,7 @@ if(contenedor){
     contenedor.innerHTML = `<p>Proyecto no encontrado</p>`
     }
 }
-
+/////////////////////////////////////////////////////////////////////////////////
 
 const slidesProyectos = document.getElementById('slides-pagina')
 const indicadoresPagina = document.getElementById(('indicadores-pagina'))
@@ -276,9 +279,12 @@ if(slidesProyectos){
             <div class="col-12 col-md-6 col-lg-4">
                 <div class="proyecto-card">
                     <img src="../assets/img/proyectos/p${proyecto.id}/hero.webp" alt="${proyecto.titulo}" onerror="this.src='https://placehold.co/600x400'">
-                    <h3>${proyecto.titulo}</h3>
-                    <p>${proyecto.descripcion}</p>
-                    <a href="proyecto-detalle.html?id=${proyecto.id}&desde=proyectos">Ver más</a>
+                    <div class="proyecto-card-degradado"></div>  
+                    <div class="proyecto-card-texto">  
+                        <h3>${proyecto.titulo}</h3>
+                        <p>${proyecto.descripcion}</p>
+                        <a href="proyecto-detalle.html?id=${proyecto.id}&desde=proyectos">Ver más</a>
+                    </div>    
                 </div>
             </div>`
         }).join('')
@@ -317,9 +323,12 @@ function renderCuadricula(lista){
             <div class="col-12 col-md-6 col-lg-4 animado">
                 <div class="proyecto-card">
                     <img src="../assets/img/proyectos/p${proyecto.id}/hero.webp" alt="${proyecto.titulo}" onerror="this.src='https://placehold.co/600x400'">
-                    <h3>${proyecto.titulo}</h3>
-                    <p>${proyecto.descripcion}</p>
-                    <a href="proyecto-detalle.html?id=${proyecto.id}&desde=proyectos">Ver más</a>
+                    <div class="proyecto-card-degradado"></div>
+                    <div class="proyecto-card-texto">
+                        <h3>${proyecto.titulo}</h3>
+                        <p>${proyecto.descripcion}</p>
+                        <a href="proyecto-detalle.html?id=${proyecto.id}&desde=proyectos">Ver más</a>
+                    </div>
                 </div>
             </div>`
         })
