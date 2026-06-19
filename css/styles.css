@@ -258,13 +258,13 @@ section h2 {
     filter: invert(1);
 }
 
-#carruselProyectos .carousel-control-prev { 
+/* #carruselProyectos .carousel-control-prev { 
     left: -5rem; 
 }
 
 #carruselProyectos .carousel-control-next { 
     right: -5rem; 
-}
+} */
 
 #proyectos .carousel-control-prev,
 #proyectos .carousel-control-next{
