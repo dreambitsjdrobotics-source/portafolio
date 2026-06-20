@@ -188,6 +188,12 @@ section h2 {
 /*  Tarjetas de cada proyecto */
 
 
+#carruselProyectos .proyecto-card {
+    max-width: 1200px;
+    margin-left:  auto;
+    margin-right: auto;
+}
+
 .proyecto-card {
     position: relative;
     border-radius: 8px;
