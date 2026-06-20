@@ -194,6 +194,14 @@ section h2 {
     margin-right: auto;
 }
 
+@media (max-width: 991px) {
+#carruselProyectos .proyecto-card {
+    max-width: 300px;
+    margin-left:  auto;
+    margin-right: auto;
+}
+}
+
 .proyecto-card {
     position: relative;
     border-radius: 8px;
