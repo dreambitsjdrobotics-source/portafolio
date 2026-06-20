@@ -195,11 +195,19 @@ section h2 {
 }
 
 @media (max-width: 991px) {
-#carruselProyectos .proyecto-card {
-    max-width: 300px;
-    margin-left:  auto;
-    margin-right: auto;
+    #carruselProyectos .proyecto-card {
+        max-width: 600px;
+        margin-left:  auto;
+        margin-right: auto;
+    }
 }
+
+@media (max-width: 799px) {
+    #carruselProyectos .proyecto-card {
+        max-width: 300px;
+        margin-left:  auto;
+        margin-right: auto;
+    }
 }
 
 .proyecto-card {
