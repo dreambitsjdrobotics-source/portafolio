@@ -184,6 +184,20 @@ section h2 {
 }
 
 
+#formacion .logo-uq {
+    width: 90px;
+    height: auto;
+    fill: green;
+}
+
+#formacion .logo-ugca {
+    width: 90px;
+    height: auto;
+    fill: var(--negro);
+    margin-left: 2rem;
+}
+
+
 /* Proyectos */
 /*  Tarjetas de cada proyecto */
 
