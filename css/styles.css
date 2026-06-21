@@ -181,6 +181,19 @@ section h2 {
     margin-bottom: 1rem;
     border-left: 4px solid var(--amarillo);
     background-color: var(--blanco);
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 799px) {
+    #formacion ul li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
 
 
