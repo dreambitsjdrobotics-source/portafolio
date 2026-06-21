@@ -189,10 +189,10 @@ section h2 {
     flex-wrap: wrap;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 768px) {
     #formacion ul li {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
     }
 }
 
