@@ -1,8 +1,8 @@
 const proyectos = [
     {
         id: 1,
-        titulo: "Proyecto 1",
-        descripcion: "Descripción breve del proyecto",
+        titulo: "Proyecto oculto",
+        descripcion: "Descripción oculta del proyecto",
         imagenes: [
             "assets/img/proyectos/p1/hero.webp",      // primera imagen — el hero
             "assets/img/proyectos/p1/detalle1.webp",
@@ -23,8 +23,8 @@ const proyectos = [
     },
     {
         id: 2,
-        titulo: "Proyecto 2",
-        descripcion: "Descripción breve del proyecto",
+        titulo: "Proyecto oculto",
+        descripcion: "Descripción oculta del proyecto",
         imagenes: [
             "assets/img/proyectos/p2/hero.webp",      // primera imagen — el hero
             "assets/img/proyectos/p2/detalle1.webp",
@@ -45,8 +45,8 @@ const proyectos = [
     },
     {
         id: 3,
-        titulo: "Proyecto 3",
-        descripcion: "Descripción breve del proyecto",
+        titulo: "Proyecto oculto",
+        descripcion: "Descripción oculta del proyecto",
         imagenes: [
             "assets/img/proyectos/p3/hero.webp",      // primera imagen — el hero
             "assets/img/proyectos/p3/detalle1.webp",
@@ -67,8 +67,8 @@ const proyectos = [
     },
     {
         id: 4,
-        titulo: "Proyecto 4",
-        descripcion: "Descripción breve del proyecto",
+        titulo: "Proyecto oculto",
+        descripcion: "Descripción oculta del proyecto",
         imagenes: [
             "assets/img/proyectos/p3/hero.webp",      // primera imagen — el hero
             "assets/img/proyectos/p3/detalle1.webp",
@@ -89,20 +89,21 @@ const proyectos = [
     },
     {
         id: 5,
-        titulo: "Proyecto 5",
-        descripcion: "Descripción breve del proyecto",
+        titulo: "Robot evita obstáculos",
+        descripcion: "Un carro fabricado con arduino hecho en un día",
         imagenes: [
             "assets/img/proyectos/p3/hero.webp",      // primera imagen — el hero
             "assets/img/proyectos/p3/detalle1.webp",
             "assets/img/proyectos/p3/detalle2.webp"
         ],
-        introduccion: "contexto del proyecto...",
-        personajes: ["Cliente", "Equipo"],
+        introduccion: "Este proyecto nació cuando un estudiante me pidió ayuda para un proyecto escolar. El reto consistía en construir un robot con materiales fáciles de conseguir, específicamente un carro capaz de detectar y evitar obstáculos de manera autónoma.",
+        personajes: ["Estudiante de colegio ", "Yo como ingeniero y asesor"],
         mi_rol: "Desarrollador principal...",
         retos: "Los principales retos fueron...",
         solucion: "Se resolvió mediante...",
         herramientas: [
-            {nombre: "React", logo: "assets/img/logos/react.svg"}
+            {nombre: "Arduino", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Arduino_IDE_logo.svg/1280px-Arduino_IDE_logo.svg.png?_=20230510165732"},
+            {nombre: "Electrónica", logo: "https://www.svgrepo.com/show/325134/electronics-chip.svg"}
         ],
         anexos: [
             { tipo: "github", url: "https://github.com/...", texto: "Ver código"},
@@ -228,7 +229,7 @@ if(contenedor){
                 <div class="herramientas">
                     ${proyecto.herramientas.map(function(h) {
                         return `<div class="herramienta">
-                                    <img src="https://placehold.co/50x50" alt="${h.nombre}">
+                                    <img src="${h.logo}" alt="${h.nombre}" onerror="https://placehold.co/50x50">
                                     <span>${h.nombre}</span>
                                 </div>`
                     }).join('')}

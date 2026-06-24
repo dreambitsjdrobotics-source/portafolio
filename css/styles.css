@@ -155,14 +155,60 @@ section h2 {
 }
 
 /* Quién soy */
-#quien-soy {
+#quien-soy #presentacion{
     background-color: var(--blanco);
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: wrap;
+}
+
+#quien-soy .presentacion-texto{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 400px; /* necesita una altura definida de la foto de presentación*/
 }
 
 #quien-soy p{
     font-size: 1.1rem;
     line-height: 1.8;
     max-width: 700px;
+    margin: auto;
+}
+
+#quien-soy img{
+    height: 600px;
+    width: auto; 
+    transition: filter 0.3s ease;
+    filter: brightness(130%);
+    border-radius: 5% 25%; /* Estilo */ 
+    /* box-shadow: 10px 10px 10px 10px; */
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+#quien-soy img:hover {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    /* box-shadow: 10px 10px 10px 10px; */
+}
+
+@media (max-width: 1400px) {
+    #quien-soy #presentacion{
+    align-items: center;
+    justify-content: center;
+    }
+
+    #quien-soy .presentacion-texto{
+        justify-content: center;
+        height: auto; /* necesita una altura definida */
+    }
+
+    #quien-soy p{
+    margin-bottom: 3rem;
+    }
+
 }
 
 /*   Formación   */
@@ -188,6 +234,9 @@ section h2 {
     justify-content: space-between;
     flex-wrap: wrap;
     text-align: center;
+
+    /* border-radius: 5px; */
+    /* transition: 0.3s ease; */
 }
 
 #formacion .logo-uq {
@@ -202,6 +251,11 @@ section h2 {
     fill: var(--negro);
     margin-right: 1.5rem;
 }
+
+/* #formacion li:hover {
+    border: 5px solid var(--amarillo);
+    border-radius: 5px;
+}  */
 
 @media (max-width: 768px) {
     #formacion ul li {
@@ -351,6 +405,12 @@ section h2 {
 .enlace-proyectos a:hover {
     background-color: var(--negro);
     color: var(--amarillo);
+}
+
+/* Contacto */
+
+#contacto a{
+    
 }
 
 /* Footer */
