@@ -102,14 +102,14 @@ const proyectos = [
             "Yo como mentor y colaborador técnico"],
         mi_rol: "Actué como asesor y tutor técnico. El estudiante ya sabía ensamblar el robot gracias a tutoriales en internet, pero necesitaba entender la programación detrás del funcionamiento. Le enseñé paso a paso la lógica de programación mientras construía mi propio carro de demostración, aceptando el reto de completarlo en menos de un día",
         retos: "El reto principal fue enseñar un código funcional y con buenas prácticas, sin que resultara demasiado avanzado para el nivel del estudiante. Además, fue necesario calibrar los tiempos de giro para que el robot reaccionara con precisión ante los obstáculos, ajustar los sensores para lograr una detección adecuada y a tiempo, y equilibrar físicamente el robot para que se moviera de forma estable.",
-        solucion: "Se resolvió mediante...",
+        solucion: "Para mantener el código simple pero profesional, organicé el programa siguiendo una estructura clara: primero las constantes de hardware (pines de motores, sensor ultrasónico y servo), luego las variables de control, y finalmente las funciones separadas por responsabilidad (avanzar, girar, medir distancia, mover la cabeza del sensor). <br><br> La detección de obstáculos se resolvió usando un sensor ultrasónico montado en un servomotor, que permite \"mirar\" hacia adelante, izquierda y derecha antes de decidir hacia dónde girar. Cuando el robot detecta un obstáculo muy cerca, se detiene, revisa ambos lados, y si no encuentra un camino libre, ejecuta un giro de media vuelta. Esta estructura modular no solo resolvió el problema de navegación, sino que también facilitó enseñarle al estudiante la lógica de programación de forma progresiva, validando cada función con pruebas unitarias antes de integrarlas al sistema completo.",
         herramientas: [
             {nombre: "Arduino", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Arduino_IDE_logo.svg/1280px-Arduino_IDE_logo.svg.png?_=20230510165732"},
             {nombre: "Electrónica", logo: "https://www.svgrepo.com/show/325134/electronics-chip.svg"}
         ],
         anexos: [
             { tipo: "github", url: "https://github.com/...", texto: "Ver código"},
-            { tipo: "web", url: "https://...", texto: "Ver proyecto" }
+            { tipo: "web", url: "https://youtube.com/shorts/PuMo8utC0-4?si=fQINh4m0--GfWw1u", texto: "Ver proyecto" }
         ]
     }
 ]
