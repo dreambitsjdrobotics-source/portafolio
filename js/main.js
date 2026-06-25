@@ -97,9 +97,11 @@ const proyectos = [
             "assets/img/proyectos/p3/detalle2.webp"
         ],
         introduccion: "Este proyecto nació cuando un estudiante me pidió ayuda para un proyecto escolar. El reto consistía en construir un robot con materiales fáciles de conseguir, específicamente un carro capaz de detectar y evitar obstáculos de manera autónoma.",
-        personajes: ["Estudiante de colegio ", "Yo como ingeniero y asesor"],
-        mi_rol: "Desarrollador principal...",
-        retos: "Los principales retos fueron...",
+        personajes: [
+            "Estudiante de colegio destacado, encargado de presentar un proyecto especial", 
+            "Yo como mentor y colaborador técnico"],
+        mi_rol: "Actué como asesor y tutor técnico. El estudiante ya sabía ensamblar el robot gracias a tutoriales en internet, pero necesitaba entender la programación detrás del funcionamiento. Le enseñé paso a paso la lógica de programación mientras construía mi propio carro de demostración, aceptando el reto de completarlo en menos de un día",
+        retos: "El reto principal fue enseñar un código funcional y con buenas prácticas, sin que resultara demasiado avanzado para el nivel del estudiante. Además, fue necesario calibrar los tiempos de giro para que el robot reaccionara con precisión ante los obstáculos, ajustar los sensores para lograr una detección adecuada y a tiempo, y equilibrar físicamente el robot para que se moviera de forma estable.",
         solucion: "Se resolvió mediante...",
         herramientas: [
             {nombre: "Arduino", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Arduino_IDE_logo.svg/1280px-Arduino_IDE_logo.svg.png?_=20230510165732"},
@@ -189,37 +191,52 @@ if(contenedor){
         <!-- Introducción -->
         <section class="detalle-seccion animado">
             <h2>Introducción</h2>
-            <p>${proyecto.introduccion}</p>
+            <div class="detalle-imagen-texto">
+                    <p>${proyecto.introduccion}</p>
+                <img src="../assets/img/proyectos/p5/imgDetalle.png" alt="foto Juan David">
+            </div>  
         </section>
 
         <!-- Personajes -->
         <section class="detalle-seccion animado">
             <h2>Personajes</h2>
-            <ul>
-                ${proyecto.personajes.map(function(p) {
-                    return `<li>${p}</li>`
-                }).join('')}
-            </ul>
+            <div class="detalle-imagen-texto">
+                <img src="../assets/img/proyectos/p5/imgPersonaje.png" alt="foto Juan David">
+                <ul>
+                    ${proyecto.personajes.map(function(p) {
+                        return `<li>${p}</li>`
+                    }).join('')}
+                </ul>
+            </div>
         </section>
 
         <!-- Mi rol -->
         <section class="detalle-seccion animado">
             <h2>Mi rol</h2>
-            <p>${proyecto.mi_rol}</p>
+            <div class="detalle-imagen-texto">
+                <p>${proyecto.mi_rol}</p>
+                <img src="../assets/img/proyectos/p5/imgDetalle.png" alt="foto Juan David">
+            </div>
         </section>
 
         <!-- Retos -->
         <section class="fondo-amarillo">
             <div class="detalle-seccion animado">     
                 <h2>Retos</h2>
-                <p>${proyecto.retos}</p>
+                <div class="detalle-imagen-texto">
+                    <img src="../assets/img/proyectos/p5/reto.png" alt="foto Juan David">
+                    <p>${proyecto.retos}</p>
+                </div>
             </div>
         </section>
 
         <!-- Solución -->
         <section class="detalle-seccion animado">
             <h2>Solución</h2>
-            <p>${proyecto.solucion}</p>
+            <div class="detalle-imagen-texto">
+                <p>${proyecto.solucion}</p>
+                <img src="../assets/img/proyectos/p5/imgDetalle.png" alt="foto Juan David">
+            </div>
         </section>
 
         <!-- Herramientas -->

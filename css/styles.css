@@ -155,7 +155,7 @@ section h2 {
 }
 
 /* Quién soy */
-#quien-soy #presentacion{
+#quien-soy .presentacion{
     background-color: var(--blanco);
     display: flex;
     justify-content: space-between;
@@ -195,7 +195,7 @@ section h2 {
 }
 
 @media (max-width: 1400px) {
-    #quien-soy #presentacion{
+    #quien-soy .presentacion{
     align-items: center;
     justify-content: center;
     }
@@ -410,7 +410,8 @@ section h2 {
 /* Contacto */
 
 #contacto a{
-    
+    font-style: italic;
+    text-decoration: none;
 }
 
 /* Footer */
@@ -457,6 +458,87 @@ footer {
     max-width: 100%;
     padding: 0;
 }
+
+/* adptar */
+
+.detalle-seccion .presentacion{
+    background-color: var(--blanco);
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: wrap;
+}
+
+.detalle-seccion .presentacion-texto{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 400px; /* necesita una altura definida de la foto de presentación*/
+}
+
+.detalle-seccion p{
+    font-size: 1.1rem;
+    line-height: 1.8;
+    max-width: 700px;
+    margin: auto; 
+}
+
+.detalle-seccion img{
+    height: 300px;
+    width: auto; 
+    transition: filter 0.3s ease;
+    filter: brightness(130%);
+    border-radius: 5% 25%; /* Estilo */ 
+    /* box-shadow: 10px 10px 10px 10px; */
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+.detalle-seccion img:hover {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    /* box-shadow: 10px 10px 10px 10px; */
+}
+
+@media (max-width: 1400px) {
+    .detalle-seccion .presentacion{
+    align-items: center;
+    justify-content: center;
+    }
+
+    .detalle-seccion .presentacion-texto{
+        justify-content: center;
+        height: auto; /* necesita una altura definida */
+    }
+
+    .detalle-seccion p{
+    margin-bottom: 3rem;
+    }
+}
+
+.detalle-imagen-texto {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.detalle-imagen-texto img {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.detalle-imagen-texto p,
+.detalle-imagen-texto ul {
+    flex: 1;
+    min-width: 280px;
+    max-width: none; /* el .detalle-seccion p general trae max-width: 700px y margin: auto, lo neutralizamos aquí */
+    margin: 0;
+}
+
+/* fin adaptar */
 
 .detalle-hero {
     min-height: 80vh;
