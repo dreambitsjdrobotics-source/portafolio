@@ -215,7 +215,7 @@ if(contenedor){
             <h2>Mi rol</h2>
             <div class="detalle-imagen-texto">
                 <p>${proyecto.mi_rol}</p>
-                <img src="../assets/img/proyectos/p5/imgDetalle.png" alt="foto Juan David">
+                <img src="../assets/img/proyectos/p5/rol.webp" alt="foto Juan David">
             </div>
         </section>
 
@@ -235,7 +235,7 @@ if(contenedor){
             <h2>Solución</h2>
             <div class="detalle-imagen-texto">
                 <p>${proyecto.solucion}</p>
-                <img src="../assets/img/proyectos/p5/imgDetalle.png" alt="foto Juan David">
+                <img src="../assets/img/proyectos/p5/solucion.webp" alt="foto Juan David">
             </div>
         </section>
 
