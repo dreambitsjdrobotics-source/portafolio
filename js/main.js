@@ -193,7 +193,7 @@ if(contenedor){
             <h2>Introducción</h2>
             <div class="detalle-imagen-texto">
                     <p>${proyecto.introduccion}</p>
-                <img src="../assets/img/proyectos/p5/imgDetalle.png" alt="foto Juan David">
+                <img src="../assets/img/proyectos/p5/imgDetalle.webp" alt="foto Juan David">
             </div>  
         </section>
 
@@ -201,7 +201,7 @@ if(contenedor){
         <section class="detalle-seccion animado">
             <h2>Personajes</h2>
             <div class="detalle-imagen-texto">
-                <img src="../assets/img/proyectos/p5/imgPersonaje.png" alt="foto Juan David">
+                <img src="../assets/img/proyectos/p5/imgPersonaje.webp" alt="foto Juan David">
                 <ul>
                     ${proyecto.personajes.map(function(p) {
                         return `<li>${p}</li>`
@@ -235,7 +235,7 @@ if(contenedor){
             <h2>Solución</h2>
             <div class="detalle-imagen-texto">
                 <p>${proyecto.solucion}</p>
-                <img src="../assets/img/proyectos/p5/solucion.png" alt="foto Juan David">
+                <img src="../assets/img/proyectos/p5/solucion.webp" alt="foto Juan David">
             </div>
         </section>
 
