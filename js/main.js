@@ -224,7 +224,7 @@ if(contenedor){
             <div class="detalle-seccion animado">     
                 <h2>Retos</h2>
                 <div class="detalle-imagen-texto">
-                    <img src="../assets/img/proyectos/p5/reto.png" alt="foto Juan David">
+                    <img src="../assets/img/proyectos/p5/reto.webp" alt="foto Juan David">
                     <p>${proyecto.retos}</p>
                 </div>
             </div>
@@ -235,7 +235,7 @@ if(contenedor){
             <h2>Solución</h2>
             <div class="detalle-imagen-texto">
                 <p>${proyecto.solucion}</p>
-                <img src="../assets/img/proyectos/p5/solucion.webp" alt="foto Juan David">
+                <img src="../assets/img/proyectos/p5/solucion.png" alt="foto Juan David">
             </div>
         </section>
 
