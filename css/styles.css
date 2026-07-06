@@ -188,6 +188,39 @@ section h2 {
     transform: scaleX(-1);
 }
 
+#quien-soy-redes{
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    margin-top: 2rem;
+}
+
+#quien-soy-redes a i {
+    text-decoration: none;
+    color: var(--negro);
+    font-size:  1.5rem;
+}
+
+#quien-soy-redes a {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+#quien-soy-redes a:hover {
+    transform: scale(1.4);
+}
+
+#quien-soy-redes i {
+    transition: color 0.3s ease;
+}
+
+#quien-soy-redes a:hover i{
+    color: var(--amarillo);
+}
+
+
 #quien-soy img:hover {
     -webkit-transform: scaleX(1);
     transform: scaleX(1);
@@ -208,7 +241,13 @@ section h2 {
     #quien-soy p{
     margin-bottom: 3rem;
     }
+}
 
+@media (max-width: 1200px){
+    
+    #quien-soy-redes{
+        justify-content: center;
+    }
 }
 
 /*   Formación   */
