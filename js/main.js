@@ -395,7 +395,7 @@ form.addEventListener('submit', async (e) => {
 
     const originalText = submitBtn.textContent;
 
-    submitBtn.textContent = "Sending...";
+    submitBtn.textContent = "Enviando...";
     submitBtn.disabled = true;
 
     try {
@@ -407,15 +407,14 @@ form.addEventListener('submit', async (e) => {
         const data = await response.json();
 
         if (response.ok) {
-            alert("Success! Your message has been sent.");
+            alert("¡Mensaje enviado correctamente!");
             form.reset();
-            window.location.href = "../index.html#contacto";
         } else {
             alert("Error: " + data.message);
         }
 
     } catch (error) {
-        alert("Something went wrong. Please try again.");
+        alert("Ocurrió un error. Inténtalo nuevamente.");
     } finally {
         submitBtn.textContent = originalText;
         submitBtn.disabled = false;
