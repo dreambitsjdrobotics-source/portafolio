@@ -373,29 +373,17 @@
                 <!-- <p>UserName@correo.com</p>
                 <a href="mailto:tucorreo@gmail.com" class="btn-contacto">Enviar correo</a> -->
 
-        <form id="form">
-            <input
-                type="text"
-                name="name"
-                placeholder="Tu nombre"
-                required
-            >
-
-            <input
-                type="email"
-                name="email"
-                placeholder="Tu correo electrónico"
-                required
-            >
-
-            <textarea
-                name="message"
-                placeholder="Escribe tu mensaje..."
-                required
-            ></textarea>
-
-            <button type="submit">Enviar</button>
-        </form>
+                <div class="contenedor-formulario">
+                    <form id="form" class="formulario">
+                        <div>
+                            <input type="text" name="name" placeholder="Tu nombre" required>
+                            <input type="email" name="email" placeholder="Tu correo electrónico" required>
+                        </div>
+                            <textarea name="message" placeholder="¿Qué proyecto tienes en mente? cuéntamelo" required></textarea>
+                            <button type="submit">Enviar</button>
+                            <span id="span-envio-correo" hidden>Enviado</span>
+                    </form>
+                </div>
             </div>
          </section>
 

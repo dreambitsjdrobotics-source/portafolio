@@ -381,9 +381,10 @@ function observarAnimaciones(contenedor){
 
 observarAnimaciones()
 
+
+
+
 // mandar correo
-
-
 const form = document.getElementById('form');
 const submitBtn = form.querySelector('button[type="submit"]');
 

@@ -453,6 +453,104 @@ section h2 {
     text-decoration: none;
 }
 
+#contacto .contenedor-formulario {
+    display: flex;
+    justify-content: center;
+}
+
+#contacto .formulario {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    width: 80%;
+}
+
+
+#contacto .formulario div{
+    display: flex;
+    justify-content: space-evenly;
+    align-content: stretch;
+    gap: 20px;
+ 
+}
+
+#contacto .formulario span{
+    gap: 20px;
+    background-color: #111;    
+    text-align: center;
+    color: var(--amarillo-suave);
+}
+
+/* //////////////////// */
+#contacto .formulario input,
+#contacto .formulario textarea {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 2px solid var(--gris-suave);
+    border-radius: 5px;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 1rem;
+    background-color: var(--blanco);
+    transition: border-color 0.6s ease;
+}
+
+#contacto .formulario input:focus,
+#contacto .formulario textarea:focus {
+    outline: none;
+    border-color: var(--amarillo);
+}
+
+#contacto .formulario textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+#contacto .formulario button {
+    background-color: var(--amarillo);
+    color: var(--negro);
+    padding: 0.7rem 2rem;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    align-self: flex-start;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+#contacto .formulario button:hover {
+    background-color: var(--negro);
+    color: var(--amarillo);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    #contacto .formulario div {
+        flex-direction: column;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Footer */
 footer {
     background-color: var(--negro);
