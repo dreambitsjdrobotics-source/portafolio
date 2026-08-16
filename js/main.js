@@ -1,26 +1,31 @@
 const proyectos = [
-    {
-        id: 1,
-        titulo: "Proyecto oculto",
-        descripcion: "Descripción oculta del proyecto",
-        imagenes: [
-            "assets/img/proyectos/p1/hero.webp",      // primera imagen — el hero
-            "assets/img/proyectos/p1/detalle1.webp",
-            "assets/img/proyectos/p1/detalle2.webp"
-        ],
-        introduccion: "contexto del proyecto...",
-        personajes: ["Cliente", "Equipo"],
-        mi_rol: "Desarrollador principal...",
-        retos: "Los principales retos fueron...",
-        solucion: "Se resolvió mediante...",
-        herramientas: [
-            {nombre: "React", logo: "assets/img/logos/react.svg"}
-        ],
-        anexos: [
-            { tipo: "github", url: "https://github.com/...", texto: "Ver código"},
-            { tipo: "web", url: "https://...", texto: "Ver proyecto" }
-        ]
-    },
+{
+    id: 1,
+    titulo: "Consultoría para Mipyme",
+    descripcion: "Costos y marketing para manos creativas",
+    imagenes: [
+        "assets/img/proyectos/p1/hero.webp",      // primera imagen — el hero
+        "assets/img/proyectos/p1/detalle1.webp",
+        "assets/img/proyectos/p1/detalle2.webp"
+    ],
+    introduccion: "Manos Creativas (manoscreativas1954) es un emprendimiento dedicado a la confección artesanal de ropa, bolsos y accesorios, con especialidad en cueros y tejidos. Su propietaria, una mujer con años de experiencia en el oficio, buscaba fortalecer dos frentes clave de su negocio: entender realmente cuánto le costaba producir cada pieza y ganar visibilidad en redes sociales para llegar tanto a su público tradicional de mujeres mayores como a un público más joven interesado en sus vestidos de baño tejidos.",
+    personajes: [
+        "Propietaria del emprendimiento, artesana con amplia trayectoria en confección",
+        "Yo como consultor de administración de empresas y estratega de contenido"
+    ],
+    mi_rol: "Actué como consultor integral, cubriendo dos frentes: por un lado, el diagnóstico y diseño de una estructura de costos que le permitiera a la propietaria fijar precios con criterio real de rentabilidad; por otro, el diseño de una estrategia de contenido para Instagram, incluyendo la elaboración de guiones, la grabación y edición de los videos, con el objetivo de posicionar la marca como una autoridad reconocible en su nicho.",
+    retos: "El negocio no contaba con ninguna estructura de costos definida: los precios se fijaban de forma intuitiva, sin diferenciar materia prima, mano de obra y otros gastos asociados a la producción, lo que dificultaba saber con certeza si cada pieza dejaba una ganancia real. En el frente de marketing, el reto fue la ausencia de contenido audiovisual que diera a conocer la marca; era necesario crear videos desde cero que comunicaran el valor de un producto hecho a mano y que conectaran tanto con clientas mayores fieles a la marca como con un público más joven, sin perder la esencia artesanal del negocio.",
+    solucion: "Para la estructura de costos, se levantó junto a la propietaria un desglose detallado de cada línea de producto (vestidos de baño, salidas de baño, bolsos y pulseras), identificando materia prima, tiempo de trabajo y otros costos indirectos, para llegar a un precio de venta que reflejara un margen de ganancia claro y sostenible en el tiempo. <br><br> Para la estrategia de contenido, se definieron guiones simples y auténticos que mostraran el proceso de creación de cada pieza, resaltando el trabajo manual como diferencial frente a productos de fábrica. La grabación se realizó con una GoPro y un micrófono DJI Mic Mini para asegurar buena calidad de imagen y audio incluso en condiciones caseras, y la edición se hizo en CapCut, priorizando un formato ágil y cercano, pensado para el consumo en Instagram. <br><br> El resultado fue un conjunto de videos publicados en la cuenta de la marca, junto con una base de precios coherente que la propietaria puede replicar de forma autónoma en futuras piezas.",
+    herramientas: [
+        {nombre: "Excel", logo: "https://upload.wikimedia.org/wikipedia/commons/3/34/Microsoft_Office_Excel_%282019%E2%80%93present%29.svg"},
+        {nombre: "GoPro", logo: "assets/img/logos/gopro.svg"},
+        {nombre: "DJI Mic Mini", logo: "assets/img/logos/dji.svg"},
+        {nombre: "CapCut", logo: "assets/img/logos/capcut.svg"}
+    ],
+    anexos: [
+        { tipo: "web", url: "https://instagram.com/manoscreativas1954", texto: "Ver Instagram" }
+    ]
+},
     {
         id: 2,
         titulo: "Proyecto oculto",
@@ -70,9 +75,9 @@ const proyectos = [
         titulo: "Proyecto oculto",
         descripcion: "Descripción oculta del proyecto",
         imagenes: [
-            "assets/img/proyectos/p3/hero.webp",      // primera imagen — el hero
-            "assets/img/proyectos/p3/detalle1.webp",
-            "assets/img/proyectos/p3/detalle2.webp"
+            "assets/img/proyectos/p4/hero.webp",      // primera imagen — el hero
+            "assets/img/proyectos/p4/detalle1.webp",
+            "assets/img/proyectos/p4/detalle2.webp"
         ],
         introduccion: "contexto del proyecto...",
         personajes: ["Cliente", "Equipo"],
@@ -92,9 +97,9 @@ const proyectos = [
         titulo: "Robot evita obstáculos",
         descripcion: "Un carro fabricado con arduino hecho en un día",
         imagenes: [
-            "assets/img/proyectos/p3/hero.webp",      // primera imagen — el hero
-            "assets/img/proyectos/p3/detalle1.webp",
-            "assets/img/proyectos/p3/detalle2.webp"
+            "assets/img/proyectos/p5/hero.webp",      // primera imagen — el hero
+            "assets/img/proyectos/p5/detalle1.webp",
+            "assets/img/proyectos/p5/detalle2.webp"
         ],
         introduccion: "Este proyecto nació cuando un estudiante me pidió ayuda para un proyecto escolar. El reto consistía en construir un robot con materiales fáciles de conseguir, específicamente un carro capaz de detectar y evitar obstáculos de manera autónoma.",
         personajes: [
