@@ -198,7 +198,7 @@ if(contenedor){
             <h2>Introducción</h2>
             <div class="detalle-imagen-texto">
                     <p>${proyecto.introduccion}</p>
-                <img src="../assets/img/proyectos/p${proyecto.id}/imgDetalle.webp" alt="foto Juan David">
+                <img src="../assets/img/proyectos/p${proyecto.id}/imgDetalle.webp" alt="foto Juan David" onerror="this.src='https://placehold.co/600x400'">
             </div>  
         </section>
 
@@ -206,7 +206,7 @@ if(contenedor){
         <section class="detalle-seccion animado">
             <h2>Personajes</h2>
             <div class="detalle-imagen-texto">
-                <img src="../assets/img/proyectos/p${proyecto.id}/imgPersonaje.webp" alt="foto Juan David">
+                <img src="../assets/img/proyectos/p${proyecto.id}/imgPersonaje.webp" alt="foto Juan David" onerror="this.src='https://placehold.co/600x400'">
                 <ul>
                     ${proyecto.personajes.map(function(p) {
                         return `<li>${p}</li>`
@@ -220,7 +220,7 @@ if(contenedor){
             <h2>Mi rol</h2>
             <div class="detalle-imagen-texto">
                 <p>${proyecto.mi_rol}</p>
-                <img src="../assets/img/proyectos/p${proyecto.id}/rol.webp" alt="foto Juan David">
+                <img src="../assets/img/proyectos/p${proyecto.id}/rol.webp" alt="foto Juan David" onerror="this.src='https://placehold.co/600x400'">
             </div>
         </section>
 
@@ -229,7 +229,7 @@ if(contenedor){
             <div class="detalle-seccion animado">     
                 <h2>Retos</h2>
                 <div class="detalle-imagen-texto">
-                    <img src="../assets/img/proyectos/p${proyecto.id}/reto.webp" alt="foto Juan David">
+                    <img src="../assets/img/proyectos/p${proyecto.id}/reto.webp" alt="foto Juan David" onerror="this.src='https://placehold.co/600x400'">
                     <p>${proyecto.retos}</p>
                 </div>
             </div>
@@ -240,7 +240,7 @@ if(contenedor){
             <h2>Solución</h2>
             <div class="detalle-imagen-texto">
                 <p>${proyecto.solucion}</p>
-                <img src="../assets/img/proyectos/p${proyecto.id}/solucion.webp" alt="foto Juan David">
+                <img src="../assets/img/proyectos/p${proyecto.id}/solucion.webp" alt="foto Juan David" onerror="this.src='https://placehold.co/600x400'">
             </div>
         </section>
 
